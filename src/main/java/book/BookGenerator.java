@@ -14,7 +14,7 @@ public class BookGenerator {
                 .isbn13(faker.code().isbn13())
                 .author(faker.book().author())
                 .title(faker.book().title())
-                .format(faker.options())
+                .format(faker.options().option(Book.Format.values()))
                 .publisher(faker.book().publisher())
                 .publicationDate(faker.date())
                 .pages(faker.number().numberBetween(1,500))
