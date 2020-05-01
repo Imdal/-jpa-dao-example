@@ -1,10 +1,10 @@
 package book;
 
-import com.github.javafaker.Book;
+import book.model.Book;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import guice.PersistenceModule;
-;import static book.BookGenerator.createBook;
+import static book.BookGenerator.createBook;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +13,6 @@ public class Main {
         for (int i = 0; i < 1000; i++) {
             Book book = createBook();
             System.out.println(book);
-            bookGenerator.persist(book);
         }
 //        bookGenerator.findAll()
 //                .stream()
